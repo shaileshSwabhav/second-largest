@@ -25,7 +25,7 @@ app.post('/second-largest', (req, res) => {
 
 const startApp = async () => {
   try {
-    const PORT = 4000
+    const PORT = process.env.PORT || 4000
     app.listen(PORT, console.log(`Server started at port ${PORT}`))
   } catch (error) {
     console.error(error);
